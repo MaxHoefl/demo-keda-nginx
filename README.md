@@ -39,3 +39,5 @@ helm upgrade --install keda kedacore/keda -n keda
   - `ACR_REGISTRY_URL`: Found in portal -> acr
   - `AKS_CLUSTER_NAME`: AKS cluster name
   - `AKS_RG`: Resource group for aks
+- IMPORTANT: In order for your traffic to reach the external ip of the load balancer created by the nginx controller,
+you need to set `externalTrafficPolicy: Local` in the nginx controller service.

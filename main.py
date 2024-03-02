@@ -1,12 +1,12 @@
 import uvicorn
 from fastapi import FastAPI
 
-app = FastAPI()
+app = FastAPI(root_path="/api")
 
 
-@app.get("/hello")
-def read_random_slice():
-    return {"hello": "world"}
+@app.get("/health")
+def health():
+    return {"health": "ok"}
 
 
 if __name__ == "__main__":

@@ -11,7 +11,7 @@ spec:
   - host: demo-keda-nginx.app.msy.com
     http:
       paths:
-      - path: /app(/|$)(.*)
+      - path: /api(/|$)(.*)
         pathType: Prefix
         backend:
           service:
