@@ -33,3 +33,7 @@ helm repo add kedacore https://kedacore.github.io/charts
 helm repo update
 helm upgrade --install keda kedacore/keda -n keda
 ```
+- Setup github repository secrets:
+  - `ACR_PASSWORD`: Found in portal -> acr -> keys -> password
+  - `ACR_USERNAME`: Found in portal -> acr -> keys -> username
+  - `ACR_REGISTRY_URL`: Found in portal -> acr
