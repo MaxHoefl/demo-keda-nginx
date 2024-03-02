@@ -37,3 +37,5 @@ helm upgrade --install keda kedacore/keda -n keda
   - `ACR_PASSWORD`: Found in portal -> acr -> keys -> password
   - `ACR_USERNAME`: Found in portal -> acr -> keys -> username
   - `ACR_REGISTRY_URL`: Found in portal -> acr
+  - `AKS_CLUSTER_NAME`: AKS cluster name
+  - `AKS_RG`: Resource group for aks
