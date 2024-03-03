@@ -41,3 +41,13 @@ helm upgrade --install keda kedacore/keda -n keda
   - `AKS_RG`: Resource group for aks
 - IMPORTANT: In order for your traffic to reach the external ip of the load balancer created by the nginx controller,
 you need to set `externalTrafficPolicy: Local` in the nginx controller service.
+- Install prometheus:
+```
+kubectl create namespace prometheus
+
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts --namespace prometheus
+helm repo update
+helm upgrade --install prometheus prometheus-community/prometheus -n prometheus
+```
+- You can access prometheus at http://localhost:9090 when you port-forward `kubectl --namespace prometheus port-forward prometheus-server-<pod-id> 9090`
+
