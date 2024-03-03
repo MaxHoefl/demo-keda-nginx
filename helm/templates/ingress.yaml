@@ -9,7 +9,8 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - http:
+  - host: "demo-api.msy.apps.de"
+    http:
       paths:
       - path: /api(/|$)(.*)
         pathType: Prefix
@@ -17,4 +18,4 @@ spec:
           service:
             name: demo-api-svc
             port:
-              number: 80
+              number: 8080
